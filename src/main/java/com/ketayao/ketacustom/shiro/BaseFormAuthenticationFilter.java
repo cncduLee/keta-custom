@@ -73,7 +73,7 @@ public class BaseFormAuthenticationFilter extends FormAuthenticationFilter {
 				if (log.isTraceEnabled()) {
 					log.trace("Login submission detected.  Attempting to execute login.");
 				}
-				return executeLogin(request, response);
+				return false;
 			}
 		} catch (Exception e) {
 			log.error(Exceptions.getStackTraceAsString(e));
